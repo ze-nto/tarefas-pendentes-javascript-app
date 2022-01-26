@@ -1,0 +1,207 @@
+@import './settings/colors';
+
+.list{
+  border: $baseborder;
+  width: 800px;
+  min-height: 50vh;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 3px #ccc;
+  background-color: $bege;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .noTaskMsg{
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    color:rgb(180, 179, 179);
+
+    &.hide {
+      display: none;
+  }
+}
+
+}
+
+.legenda{
+  display: none;
+  width: 180px;
+  right: 0;
+  align-self: flex-end;
+  justify-content: space-around;
+
+  span{
+    display: inline-block;
+    width: 50px;
+    line-height: 10px;
+    text-align: center;
+    height: 100%;
+
+    &:first-child{
+      border-right: 1px solid rgba($brown, 0.4);
+      padding-right: 10px;
+      width: 50px;
+      margin-left: -5px;
+    }
+
+    &:nth-child(2){
+      width: 70px;
+      text-align: center;
+    }
+
+    &:last-child{
+      text-align: center;
+      padding: auto;
+      border-left: 1px solid rgba($brown, 0.4);
+    }
+  }
+}
+
+
+
+
+
+img{
+  width: 15px;
+}
+
+.task{
+  display: block;
+  border: 1px solid $brown;
+  border-radius: 5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  animation: entrada .3s ease-in;
+
+  .prioridade{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    background-color: $brown;
+    color: $white;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  .controls{
+    width: 180px;
+    border-left: 1px solid $brown;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    padding-left: 8px;
+    font-size: 26px;
+
+    div{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+
+      &:hover{
+        background: $brown;
+      }
+
+      &:first-child{
+        margin-right: 10px;
+        border-right: 1px solid rgba($brown, 0.4);
+        padding: 0 10px;
+      }
+      
+      &:last-child{
+        margin-right: 10px;
+        border-left: 1px solid rgba($brown, 0.4);
+        padding: 0 10px;
+      }
+    }
+
+    select{
+      width: 50px;
+      height: 25px;
+      font-size: 24px;
+    }
+
+  }
+
+  
+  .descricao{
+    background-color: #fff;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 48px; 
+  }
+}
+
+.active {
+  display: block;
+}
+
+.remove{
+  animation: saida .3s forwards;
+}
+
+.subir{
+  animation: subir .3s forwards;
+}
+
+
+@keyframes entrada {
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subir {
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes saida {
+  from{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+    // transform: translateX(0px);
+  }
+  to{
+    opacity: 1;
+    // transform: translateX(10px);
+  }
+}

@@ -1,0 +1,60 @@
+@import 'settings/colors';
+
+.form{
+  border: $baseborder;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  border-radius: 10px;
+  background-color: $bege;
+
+  input{
+    width: 80%;
+    margin-right: 20px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: 3px solid $brown;
+    
+  }
+  
+  input:hover, 
+  input:focus,
+  button:hover,
+  button:active{
+    outline: 3px solid green;
+    outline-offset: 3px;
+    outline-style: 3px solid;
+
+  }
+  button{
+    width: 140px;
+    height: 40px;
+    background-color: $brown;
+    color: $white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    font-size: 24px;
+
+    
+    &:hover{
+      cursor: pointer;
+      background-color: $green;
+    }
+   
+    &:disabled{
+      background: $bege;
+      color: gray;
+    }
+
+    &:hover:disabled{
+      outline: none;
+      cursor: default;
+    }
+  }
+}
