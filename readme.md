@@ -7,7 +7,7 @@ Uma pequena aplicação em Vanilla JavaScript, criada como estudo de manipulaç�
 - Estilização dinâmica
 - Manipulação do DOM com criação, inserção e atualização de nós
 - Manipulação de dinâmica de atributos
-- udo de traversals para percorrer a árvore do DOM
+- USo de traversals para percorrer a árvore do DOM
 - Uso de MutationsObserver para monitorar mudanças no DOM 
 
 
@@ -27,6 +27,4 @@ Uma pequena aplicação em Vanilla JavaScript, criada como estudo de manipulaç�
     - [ ]  adicionar imagem
     - [ ]  adicionar links
   - [ ]  Temas (Painel Lateral)
-
-  - [ ] Refatoração para melhoria do código e aplicação de boas práticas
 

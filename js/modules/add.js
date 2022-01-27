@@ -14,7 +14,7 @@ function addTask(){
   li.setAttribute("id", priority)
   const content = ` 
     <span class="prioridade">${li.getAttribute('id')}</span> 
-    <span class="descricao">${task}</span>
+    <span class="descricao" contenteditable>${task}</span>
     <div class="controls">
       <div class="clone"><img src="./img/duplicate.png"></div>
       <div class="plus"><img src="./img/plus.png"></div>
