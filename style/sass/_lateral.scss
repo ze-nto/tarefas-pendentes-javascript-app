@@ -1,0 +1,107 @@
+.lateral{
+  position: absolute;
+  width: 250px;
+  min-height: 100vh;
+  height: 100%;
+  background-color: rgba(255, 255, 255);
+  box-shadow: -1px 0 5px 4px rgba(179, 178, 178, 0.425), -1px 0 2px 1px rgba(83, 83, 83, 0.616);
+  right: -250px;
+  top: 0;
+  z-index: 1000;
+  // transform: translateX(250px);
+  display: flex;
+  flex-direction: column;
+}
+
+.panelButton{
+  position: absolute;
+  left: -44px;
+  top: 20px;
+  width: 45px;
+  height: 35px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #fff;
+  box-shadow: -2px -1px 3px 1px rgba(54, 54, 54, 0.308);
+  padding: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: all 1s;
+  
+
+  &:after{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 8px;
+    height: 100%;
+    top: 0;
+    right: -1px;
+  }
+
+  &:hover{
+    img{
+      filter: invert(51%) sepia(87%) saturate(294%) hue-rotate(47deg) brightness(94%) contrast(99%);
+    }
+  }
+  
+  img{
+    width: 25px;
+  }
+}
+
+.colorItem{
+  display: inline-block;
+  width: 70%;
+  height: 40px;
+  margin: 5px auto;
+  background: royalblue;
+}
+
+span[data-color="blue"]{
+  background: blue;
+}
+span[data-color="green"]{
+  background: green;
+}
+span[data-color="red"]{
+  background: red;
+}
+span[data-color="black"]{
+  background: black;
+}
+span[data-color="purple"]{
+  background: purple;
+}
+
+h3{
+  text-align: center;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+.showLateral{
+  animation: showLateral .3s linear forwards;
+}
+
+.hideLateral{
+  animation: hideLateral .3s linear;
+}
+
+@keyframes showLateral {
+  to{
+    transform: translateX(-250px);
+  }
+  
+}
+
+@keyframes hideLateral {
+  from{
+    transform: translateX(-250px);
+  }
+  to{
+    transform: translateX(0);
+  }
+  
+}

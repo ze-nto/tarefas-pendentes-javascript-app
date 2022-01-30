@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: 100%;
   border-radius: 10px;
   background-color: $bege;
 
@@ -15,10 +15,11 @@
     width: 80%;
     margin-right: 20px;
     height: 40px;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 20px;
     padding-left: 10px;
-    border: 3px solid $brown;
+    border: transparent;
+    border: 1px solid $brown;
     
   }
   
@@ -39,7 +40,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 20px;
-    font-size: 24px;
+    font-size: 18px;
 
     
     &:hover{

@@ -1,10 +1,29 @@
+let cancel = document.querySelector('.cancel-btn')
+let delTask = document.querySelector('.del-btn')
+let deleteModal = document.querySelector('.delModal')
 
 
-function removeTask(){
-  let list = document.querySelector('.list > ul')
-  let taskToBeDeleted = this.parentNode.parentNode
-  taskToBeDeleted.classList.add('remove')
+cancel.addEventListener('click', cancelDel)
+delTask.addEventListener('click', deleteConfirmation)
+
+
+let taskToBeDeleted; 
+
+function removeTask(event){
+  deleteModal.classList.add('delActive')
+  deleteModal.style.left = `${event.clientX}px`
+  deleteModal.style.top = `${event.clientY}px`
+  taskToBeDeleted = this.parentNode.parentNode
+}
+
+function cancelDel(){
+  deleteModal.classList.remove('delActive')
+}
+
+function deleteConfirmation(){
+  deleteModal.classList.remove('delActive')
   setTimeout(() => {
+    taskToBeDeleted.classList.add('removeIt')
     list.removeChild(taskToBeDeleted)
     if(!list.childNodes.length){
       let legenda = document.querySelector('.legenda')
@@ -12,8 +31,7 @@ function removeTask(){
       legenda.classList.remove('active')
       noTask.classList.remove('hide')
     }
-  }, 300 )
+  }, 100 )
   showModal('Tarefa removida')
-
 }
 

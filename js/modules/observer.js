@@ -30,7 +30,6 @@ let observer = new MutationObserver((MutationRecords) => {
 observer.observe(tasksList, { childList: true});
 
 let observerId = new MutationObserver((MutationRecords) => {
-  console.log('mudou')
   updateId()
 })
 

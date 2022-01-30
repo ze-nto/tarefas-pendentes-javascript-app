@@ -11,7 +11,6 @@ function lessPriority(){
   if(node !== null){
   node.after(targetTask) 
   }
-
   alterId()
 
 }
